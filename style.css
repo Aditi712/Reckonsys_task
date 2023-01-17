@@ -689,3 +689,27 @@ footer{
         justify-content: space-between;
     }
 }
+
+@media (max-width: 576px){
+    section.profile{
+        align-items: center;
+    }
+    section.profile .right{
+        align-self: center;
+    }
+    section.profile .left{
+        margin-bottom: 6rem;
+    }
+    section.work .wrapper .portfolio .tabs ul{
+        flex-wrap: wrap;
+    }
+    section.work .wrapper .portfolio .tabs ul li{
+        margin-bottom: 4rem;
+    }
+    section.work .wrapper .portfolio .portfolio__wrapper{
+        margin-top: 0;
+    }
+    section.contact .wrapper .right .form__group{
+        grid-template-columns: 1fr;
+    }
+}
