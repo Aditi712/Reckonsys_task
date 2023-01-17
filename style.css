@@ -199,10 +199,6 @@ section.profile .right ul.socials li:nth-child(2) a{
     background: var(--twitter);
 }
 
-section.profile .right ul.socials li:nth-child(3) a{
-    background: var(--dribbble);
-}
-
 .section__heading{
     font-size: 16px;
     font-weight: 500;
@@ -255,11 +251,12 @@ section.about .content p{
 }
 
 section.about .content .left button{
-    background: rgba(77, 121, 246, 0.1);
-    color: var(--info);
+    background: var(--secondary);
+    color: var(--pure);
     padding: 4px 8px;
     font-size: 12px;
     border: none;
+    border-radius: 4%;
     line-height: 24px;
     outline: none;
     cursor: pointer;
@@ -601,7 +598,7 @@ section.contact .wrapper .right .form__group.textarea__wrapper{
     width: 100%;
 }
 
-section.contact .wrapper .right button{
+section.contact .wrapper .right input{
     background: var(--info);
     border: none;
     padding: 1rem 2rem;
@@ -678,5 +675,17 @@ footer{
     }
     section.about .content .left{
         margin-bottom: 2rem;
+    }
+    section.contact .wrapper{
+        display: block;
+    }
+}
+
+@media (max-width: 750px){
+    section.contact .wrapper .left{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 }
