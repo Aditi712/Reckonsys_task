@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.3/css/unicons.css"/> 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./plugins/magnify.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">-->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="app.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./plugins/isotopes.js"></script>
     <script src="./plugins/magnify.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -65,13 +66,23 @@
                 </ul>
                 <ul class="socials">
                     <li>
-                        <a href="https://www.facebook.com/">
+                        <a target="_blank" href="https://www.facebook.com/profile.php?id=100027209329336">
                             <i class="uil uil-facebook"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/">
+                        <a target="_blank" href="https://twitter.com/">
                             <i class="uil uil-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://github.com/Aditi712">
+                            <i class="uil uil-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/aditi-singh-5187831a3/">
+                            <i class="uil uil-linkedin"></i>
                         </a>
                     </li>
                 </ul>
@@ -246,7 +257,7 @@
                                 (06/2021 - 01/2022)<br>
                                 Certificate ID: 22CGUP16<br>
                             </p>
-                            <div> <img src="./images/prism_logo.png" alt=""></div>
+                            <div> <img src="./images/prism_logo.png" alt="prism logo"></div>
                             <h4>SAMSUNG PRISM VIRTUAL INTERNSHIP</h4>
                         </div>
                         <div class="slide">
@@ -255,7 +266,7 @@
                                 AWS Data Engineering<br>
                                 Employee ID: 2112935<br>
                             </p>
-                            <div> <img src="./images/cognizant.png" alt=""></div>
+                            <div> <img src="./images/cognizant.png" alt="cognizant logo"></div>
                             <h4>Cognizant GenC Program </h4>
                         </div>
                     </div>
@@ -272,17 +283,17 @@
                     <div class="portfolio__wrapper">
                         <div class="item design">
                             <a class=" magnify" href="./images/VI120CGU_ADITI_CERTIFICATE.jpg" title="Samsung PRISM">
-                                <img src="./images/VI120CGU_ADITI_CERTIFICATE.jpg" alt="">
+                                <img src="./images/VI120CGU_ADITI_CERTIFICATE.jpg" alt="Certificate Samsung PRISM">
                             </a>
                         </div>
                         <div class="item frontend">
                             <a class="magnify" href="./images/MicrosoftCertificate.jpg" title="Microsoft">
-                                <img src="./images/MicrosoftCertificate.jpg" alt="">
+                                <img src="./images/MicrosoftCertificate.jpg" alt="Certificate Microsoft">
                             </a>
                         </div>
                         <div class="item backend">
                             <a class="magnify" href="./images/Cambridge Assessment English.jpg" title="BEC">
-                                <img src="./images/Cambridge Assessment English.jpg" alt="">
+                                <img src="./images/Cambridge Assessment English.jpg" alt="Certificate BEC">
                             </a>
                         </div>
                     </div>
@@ -292,13 +303,13 @@
         <section class="partners">
             <h1 class="section__heading">Logic Languages</h1>
             <div class="brands__wrapper">
-                <img src="./images/html.jpg" alt="">
-                <img src="./images/css.jpg" alt="">
-                <img src="./images/js.jpg" alt="">
-                <img src="./images/c.png" alt="">
-                <img src="./images/cpp.png" alt="">
-                <img src="./images/Java.png" alt="">
-                <img src="./images/angular.png" alt="">
+                <img src="./images/html.jpg" alt="html">
+                <img src="./images/css.jpg" alt="css">
+                <img src="./images/js.jpg" alt="js">
+                <img src="./images/c.png" alt="c">
+                <img src="./images/cpp.png" alt="cpp">
+                <img src="./images/Java.png" alt="java">
+                <!--<img src="./images/angular.png" alt="angular">-->
             </div>
         </section>
         <section class="contact">
@@ -328,25 +339,24 @@
                     </div>
                 </div>
                 <div class="right">
-                    <form action="mailto:singh20aditi@gmail.com" method="get" enctype="text/plain">
+                    <form onsubmit="sendEmail(); reset(); return false;">
                         <div class="form__group">
                             <div>
-                                <label for="">Name</label>
-                                <input type="text">
+                                <label for="name">Name</label>
+                                <input  type="text">
                             </div>
                             <div>
-                                <label for="">Email</label>
+                                <label for="email">Email</label>
                                 <input type="email">
                             </div>
                         </div>
                         <div class="form__group textarea__wrapper">
                             <div>
-                                <label for="">Message</label>
-                                <textarea name="" id="" cols="30" rows="5"></textarea>
+                                <label for="message">Message</label>
+                                <textarea id="message" cols="30" rows="5"></textarea>
                             </div>
                         </div>
-                        <input type="submit" name="submit" value="Submit Now" />
-                        <!--<button type="submit"> Submit Now</button>-->
+                        <button type="submit">Submit Now</button>
                     </form>
                 </div>
             </div>
