@@ -339,7 +339,7 @@
                     </div>
                 </div>
                 <div class="right">
-                    <form onsubmit="sendEmail(); reset(); return false;">
+                    <form action="https://formsubmit.co/singh20aditi@gmail.com" method="POST">
                         <div class="form__group">
                             <div>
                                 <label>Name</label>
@@ -365,21 +365,16 @@
     <footer class="container">
         <span>© 2023. All rights reserved</span>
     </footer>
-    <script>
+   <!--<script>
          // submitting form data to gmail
-    function sendEmail(){
-        Email.send({
-        Host : "smtp.gmail.com",
-        Username : "singh20aditi@gmail.com",
-        Password : "Aditi@20022000",
-        To : 'singh20aditi@gmail.com',
-        From : document.getElementById("email").value,
-        Subject : "Enquiry Form",
-        Body : "Name: " + document.getElementById("name").value
-                + "<br> Email: " + document.getElementById("email").value
-                + "<br> Message: "+ document.getElementById("message").value
-    }).then(message => alert("Message Sent Successfully"));
-    }
-    </script>
+         var form = document.getElementById('form');
+         form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("form"))}
+          ).then(message => alert(message));
+        });
+    </script>--> 
 </body>
 </html>

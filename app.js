@@ -113,21 +113,6 @@ $(document).ready(function() {
        autoplay: true
     });
 
-    // submitting form data to gmail
-    function sendEmail(){
-        Email.send({
-        Host : "smtp.gmail.com",
-        Username : "singh20aditi@gmail.com",
-        Password : "Aditi@20022000",
-        To : 'singh20aditi@gmail.com',
-        From : document.getElementById("email").value,
-        Subject : "Enquiry Form",
-        Body : "Name: " + document.getElementById("name").value
-                + "<br> Email: " + document.getElementById("email").value
-                + "<br> Message: "+ document.getElementById("message").value
-    }).then(
-      message => alert("Message Sent Successfully")
-    );
-}
+   
 });
 
