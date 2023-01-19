@@ -342,17 +342,17 @@
                     <form onsubmit="sendEmail(); reset(); return false;">
                         <div class="form__group">
                             <div>
-                                <label for="name">Name</label>
-                                <input  type="text">
+                                <label>Name</label>
+                                <input id="name"  type="text">
                             </div>
                             <div>
-                                <label for="email">Email</label>
-                                <input type="email">
+                                <label>Email</label>
+                                <input id="email" type="email">
                             </div>
                         </div>
                         <div class="form__group textarea__wrapper">
                             <div>
-                                <label for="message">Message</label>
+                                <label>Message</label>
                                 <textarea id="message" cols="30" rows="5"></textarea>
                             </div>
                         </div>
@@ -365,5 +365,21 @@
     <footer class="container">
         <span>© 2023. All rights reserved</span>
     </footer>
+    <script>
+         // submitting form data to gmail
+    function sendEmail(){
+        Email.send({
+        Host : "smtp.gmail.com",
+        Username : "singh20aditi@gmail.com",
+        Password : "Aditi@20022000",
+        To : 'singh20aditi@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "Enquiry Form",
+        Body : "Name: " + document.getElementById("name").value
+                + "<br> Email: " + document.getElementById("email").value
+                + "<br> Message: "+ document.getElementById("message").value
+    }).then(message => alert("Message Sent Successfully"));
+    }
+    </script>
 </body>
 </html>
