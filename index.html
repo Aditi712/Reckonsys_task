@@ -339,21 +339,18 @@
                     </div>
                 </div>
                 <div class="right">
-                    <form action="https://formsubmit.co/9dd728df0fdd65eb1721c41a8ed952d1" method="POST" targer="_blank">
+                    <form target="_blank" action="https://formsubmit.co/9dd728df0fdd65eb1721c41a8ed952d1" method="POST">
                         <div class="form__group">
                             <div>
-                                <label>Name</label>
-                                <input id="name"  type="text">
+                                <input type="text" name="name" placeholder="Full Name" required>
                             </div>
                             <div>
-                                <label>Email</label>
-                                <input id="email" type="email">
+                                <input type="email" name="email" placeholder="Email Address" required>
                             </div>
                         </div>
                         <div class="form__group textarea__wrapper">
                             <div>
-                                <label>Message</label>
-                                <textarea id="message" cols="30" rows="5"></textarea>
+                                <textarea placeholder="Your Message" name="message" cols="30" rows="5" required></textarea>
                             </div>
                         </div>
                         <button type="submit">Submit Now</button>
