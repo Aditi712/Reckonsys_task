@@ -327,7 +327,9 @@
                         <div><i class="uil uil-envelope"></i></div>
                         <div>
                             <h4>Mail me: </h4>
-                            <span>singh20aditi@gmail.com</span>
+                            <a href="mailto:singh20aditi@gmail.com?subject=Email Me">
+                                <span> singh20aditi@gmail.com</span>   
+                            </a>
                         </div>
                     </div>
                     <div>
@@ -339,7 +341,7 @@
                     </div>
                 </div>
                 <div class="right">
-                    <form target="_blank" action="https://formsubmit.co/9dd728df0fdd65eb1721c41a8ed952d1" method="POST">
+                    <form id="myForm" target="_blank" action="https://formsubmit.co/9dd728df0fdd65eb1721c41a8ed952d1" method="POST">
                         <div class="form__group">
                             <div>
                                 <input type="text" name="name" placeholder="Full Name" required>
@@ -353,7 +355,7 @@
                                 <textarea placeholder="Your Message" name="message" cols="30" rows="5" required></textarea>
                             </div>
                         </div>
-                        <button type="submit">Submit Now</button>
+                        <button type="submit" onclick="myFunction()">Submit Now</button>
                     </form>
                 </div>
             </div>
@@ -362,16 +364,12 @@
     <footer class="container">
         <span>© 2023. All rights reserved</span>
     </footer>
-   <!--<script>
-         // submitting form data to gmail
-         var form = document.getElementById('form');
-         form.addEventListener("submit", e => {
-          e.preventDefault();
-          fetch(form.action, {
-              method : "POST",
-              body: new FormData(document.getElementById("form"))}
-          ).then(message => alert(message));
-        });
-    </script>--> 
+   <script>
+         // refreshing form data to after submisssion
+         function myFunction() 
+         {
+            document.getElementById("myForm").reset();
+         }
+    </script>
 </body>
 </html>
